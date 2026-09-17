@@ -94,12 +94,23 @@ summary:hover {
     clear: both;
 }
 
-.ok {
+/*.ok {
     float: left;
     width: 100px;
     height: 100px;
     padding: 12px;
     object-fit:cover;
+}*/
+* {
+  box-sizing: border-box;
+}
+
+.ok {
+  float: left;
+  width: 33.33%; /* 3 images barabar adjust hongi */
+  height: 110px;
+  padding: 6px;
+  object-fit: cover;
 }
 
 .ok:hover {
