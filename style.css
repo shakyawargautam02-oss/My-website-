@@ -108,7 +108,7 @@ summary:hover {
 .ok {
   float: left;
   width: 33.33%; /* 3 images barabar adjust hongi */
-  height: 110px;
+  height: 125px;
   padding: 6px;
   object-fit: cover;
 }
