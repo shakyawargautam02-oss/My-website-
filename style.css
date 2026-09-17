@@ -99,6 +99,7 @@ summary:hover {
     width: 100px;
     height: 100px;
     padding: 12px;
+    object-fit:cover;
 }
 
 .ok:hover {
