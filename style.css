@@ -24,6 +24,7 @@ body {
     background-color: aqua;
     text-align: right;
     padding: 5px;
+    position: sticky;
 }
 
 a {
