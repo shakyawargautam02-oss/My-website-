@@ -1,166 +1,470 @@
+/* =========================
+BASIC SETTINGS
+========================= */
+
+* {
+  box-sizing: border-box;
+  }
+
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    background-color: purple;
+margin: 0;
+background-color: purple;
+font-family: Arial, sans-serif;
 }
 
+/* =========================
+SHOP NAME
+========================= */
+
 .h {
-    text-align: center;
-    color: white;
-    background-color: red;
-    padding: 5px;
+text-align: center;
+color: white;
+background-color: red;
+
+padding: 10px;
+margin: 0;
+
+transition: 0.3s;
+
 }
 
 .h:hover {
-    color: red;
-    background-color: white;
+color: red;
+background-color: white;
 }
 
-
+/* =========================
+NAVBAR
+========================= */
 
 .hey {
-    background-color: aqua;
-    text-align: right;
-    padding: 5px;
-    position: sticky;
-    top:0px;
+background-color: aqua;
+
+text-align: right;
+padding: 6px;
+
+position: sticky;
+top: 0;
+
+z-index: 100;
+
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px;
-    background-color: aqua;
-    border-radius: 10px;
-    color: red;
+/* NORMAL LINKS */
+
+.hey > a {
+text-decoration: none;
+
+display: inline-block;
+
+padding: 7px 10px;
+
+background-color: aqua;
+
+border-radius: 10px;
+
+color: red;
+
+font-weight: bold;
+
+transition: 0.3s;
+
 }
 
-a:hover {
-    color: yellow;
-    background-color: red;
+.hey > a:hover {
+color: yellow;
+background-color: red;
 }
 
-
-
+/* =========================
+MENU
+========================= */
 
 .menu {
-    display: inline-block;
-    position: relative;
+display: inline-block;
+position: relative;
 }
 
 summary {
-    display: inline-block;
-    padding: 5px;
-    background-color: aqua;
-    color: red;
-    border-radius: 10px;
-    cursor: pointer;
+display: inline-block;
+
+padding: 7px 10px;
+
+background-color: aqua;
+
+color: red;
+
+border-radius: 10px;
+
+cursor: pointer;
+
+font-weight: bold;
+
+list-style: none;
+
 }
 
 summary:hover {
-    color: yellow;
-    background-color: red;
+color: yellow;
+background-color: red;
 }
 
+/* MENU OPTIONS */
+
 .menu-options {
-    position: absolute;
-    right: 0;
-    top: 35px;
-    /*background-color: white;*/
-    width: 100px;
-    padding: 5px;
-    z-index: 10;
-    
+position: absolute;
+
+right: 0;
+top: 40px;
+
+width: 130px;
+
+padding: 5px;
+
+background-color: white;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 10px black;
+
+z-index: 200;
+
 }
 
 .menu-options a {
-    display: block;
-    /*background-color: white;*/
-    color: red;
-    margin: 3px;
+display: block;
+
+text-decoration: none;
+
+color: red;
+
+background-color: white;
+
+padding: 8px;
+
+margin: 3px;
+
+border-radius: 6px;
+
 }
 
 .menu-options a:hover {
-    background-color: red;
-    color: yellow;
+background-color: red;
+color: yellow;
 }
 
+/* =========================
+IMAGE GRID
+========================= */
 
+.image-grid {
 
+display: grid;
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+grid-template-columns: repeat(3, 1fr);
+
+gap: 6px;
+
+padding: 6px;
+
 }
 
-/*.ok {
-    float: left;
-    width: 100px;
-    height: 100px;
-    padding: 12px;
-    object-fit:cover;
-}*/
-* {
-  box-sizing: border-box;
-}
+/* IMAGE */
 
 .ok {
-  float: left;
-  width: 33.33%; /* 3 images barabar adjust hongi */
-  aspect-ratio: 1 / 1;
-  padding: 6px;
-  object-fit: cover;
+
+width: 100%;
+
+aspect-ratio: 1 / 1;
+
+display: block;
+
+object-fit: cover;
+
+border-radius: 8px;
+
+transition: 0.3s;
+
 }
+
+/* IMAGE HOVER */
 
 .ok:hover {
-    transform: scale(1.2);
-    background-color: gray;
-    border-radius: 12px;
-    border-width: 3px;
-    border-color:red;
+
+transform: scale(1.05);
+
+background-color: gray;
+
+border: 3px solid red;
+
+border-radius: 12px;
+
+position: relative;
+
+z-index: 5;
+
 }
 
+/* =========================
+SCROLL POSITION
+========================= */
 
-/* Sections */ 
-#about{
-    margin-top: 100px;
-    border:2px solid red;
-    margin-bottom: 100px;
-    padding: 20px;
-    background-color:#777;
+#home,
+#about,
+#contact,
+#sweets,
+#namkeen,
+#cakes,
+#chocolate,
+#drinks,
+#gift {
+
+scroll-margin-top: 60px;
+
 }
-.out{
-    color:rgba(255,40,15,100.8);
-    font-size: 20px;
-    
+
+/* =========================
+ABOUT SECTION
+========================= */
+
+#about {
+
+margin-top: 100px;
+
+margin-bottom: 100px;
+
+padding: 25px;
+
+background-color: #777;
+
+border: 2px solid red;
+
+border-radius: 10px;
+
 }
-.ab{
-    color:white;
+
+/* ABOUT HEADING */
+
+.out {
+
+color: white;
+
+font-size: 25px;
+
+text-align: center;
+
+display: block;
+
+margin-bottom: 20px;
+
 }
+
+/* ABOUT TEXT */
+
+.ab {
+
+color: white;
+
+line-height: 1.6;
+
+font-size: 16px;
+
+}
+
+.ab h4 {
+margin: 0;
+}
+
+/* LINE */
+
+.ab hr {
+
+border: none;
+
+border-top: 2px solid red;
+
+margin: 20px 0;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+#contact {
+
+scroll-margin-top: 60px;
+
+margin-top: 50px;
+
+}
+
 footer {
-    border:2px solid red;
-    background: #151827;
-    color: red;
-    padding: 50px 7%;
 
-    display:block;
-    gap: 30px;
+background-color: #151827;
+
+color: red;
+
+padding: 50px 7%;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 30px;
+
+border: 2px solid red;
+
+border-radius: 10px;
+
 }
+
+/* FOOTER HEADINGS */
+
+.footer-box h3 {
+
+margin-bottom: 15px;
+
+color: red;
+
+}
+
+/* FOOTER TEXT */
 
 footer p {
-    color:white;
-    margin-top: 8px;
-}
-.hk{
-    text-align: center;
-    margin-top:100px;
-    padding-bottom:none: 
-}
-.spa{
-    float: right;
-    
+
+color: white;
+
+margin: 8px 0;
+
 }
 
+/* OWNER */
+
+.owner {
+
+grid-column: 1 / -1;
+
+text-align: center;
+
+margin-top: 30px;
+
+padding-top: 25px;
+
+border-top: 1px solid red;
+
+color: white;
+
+}
+
+.owner p {
+
+margin: 8px 0 3px;
+
+color: red;
+
+}
+
+.owner strong {
+
+color: white;
+
+}
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+/* Navbar */
+
+.hey {
+
+    text-align: center;
+
+    padding: 8px 3px;
+}
+
+.hey > a,
+summary {
+
+    padding: 6px 8px;
+
+    font-size: 14px;
+}
+
+
+/* Images */
+
+.image-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
+
+    padding: 5px;
+}
+
+
+/* About */
+
+#about {
+
+    margin-top: 70px;
+
+    padding: 18px;
+}
+
+.ab {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+footer {
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 35px 20px;
+}
+
+.owner {
+
+    grid-column: 1 / -1;
+}
+
+}
+
+/* =========================
+VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+.image-grid {
+
+    grid-template-columns: 1fr;
+}
+
+footer {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+}
+
+.owner {
+
+    grid-column: auto;
+}
+
+}
