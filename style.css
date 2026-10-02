@@ -1,9 +1,8 @@
-/* =========================
-BASIC SETTINGS
-========================= */
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
 
 html {
@@ -11,22 +10,33 @@ scroll-behavior: smooth;
 }
 
 body {
-margin: 0;
+width: 100%;
+min-height: 100vh;
+
 background-color: purple;
+
 font-family: Arial, sans-serif;
+
+overflow-x: hidden;
+
 }
 
-/* =========================
+/* =========================================
 SHOP NAME
-========================= */
+========================================= */
 
 .h {
+width: 100%;
+
 text-align: center;
+
 color: white;
+
 background-color: red;
 
-padding: 10px;
-margin: 0;
+padding: 10px 5px;
+
+font-size: 20px;
 
 transition: 0.3s;
 
@@ -34,94 +44,134 @@ transition: 0.3s;
 
 .h:hover {
 color: red;
+
 background-color: white;
+
 }
 
-/* =========================
+/* =========================================
 NAVBAR
-========================= */
+========================================= */
 
 .hey {
+width: 100%;
+
 background-color: aqua;
 
-text-align: right;
-padding: 6px;
+display: flex;
+
+justify-content: flex-end;
+
+align-items: center;
+
+flex-wrap: wrap;
+
+gap: 4px;
+
+padding: 6px 5px;
 
 position: sticky;
+
 top: 0;
 
-z-index: 100;
+z-index: 1000;
 
 }
 
-/* NORMAL LINKS */
+/* NAVBAR LINKS */
 
 .hey > a {
 text-decoration: none;
 
 display: inline-block;
 
-padding: 7px 10px;
+color: red;
 
 background-color: aqua;
 
+padding: 7px 9px;
+
 border-radius: 10px;
 
-color: red;
+font-size: 14px;
 
 font-weight: bold;
 
-transition: 0.3s;
+white-space: nowrap;
+
+transition: 0.2s;
 
 }
 
 .hey > a:hover {
 color: yellow;
+
 background-color: red;
+
 }
 
-/* =========================
+/* =========================================
 MENU
-========================= */
+========================================= */
 
 .menu {
 display: inline-block;
+
 position: relative;
+
 }
+
+/* MENU BUTTON */
 
 summary {
 display: inline-block;
 
-padding: 7px 10px;
-
-background-color: aqua;
-
-color: red;
-
-border-radius: 10px;
+list-style: none;
 
 cursor: pointer;
 
+color: red;
+
+background-color: aqua;
+
+padding: 7px 9px;
+
+border-radius: 10px;
+
+font-size: 14px;
+
 font-weight: bold;
 
-list-style: none;
+white-space: nowrap;
 
+}
+
+summary::-webkit-details-marker {
+display: none;
 }
 
 summary:hover {
 color: yellow;
+
 background-color: red;
+
 }
 
-/* MENU OPTIONS */
+/* =========================================
+MENU DROPDOWN
+========================================= */
 
 .menu-options {
+
 position: absolute;
 
-right: 0;
-top: 40px;
+top: 38px;
 
-width: 130px;
+right: 0;
+
+width: 135px;
+
+max-width: calc(100vw - 10px);
 
 padding: 5px;
 
@@ -129,14 +179,17 @@ background-color: white;
 
 border-radius: 10px;
 
-box-shadow: 0 4px 10px black;
+box-shadow: 0 4px 12px black;
 
-z-index: 200;
+z-index: 2000;
 
 }
 
 .menu-options a {
+
 display: block;
+
+width: 100%;
 
 text-decoration: none;
 
@@ -144,36 +197,47 @@ color: red;
 
 background-color: white;
 
-padding: 8px;
+padding: 8px 6px;
 
-margin: 3px;
+margin: 2px 0;
 
 border-radius: 6px;
+
+font-size: 13px;
 
 }
 
 .menu-options a:hover {
+
 background-color: red;
+
 color: yellow;
+
 }
 
-/* =========================
+/* =========================================
 IMAGE GRID
-========================= */
+IMPORTANT:
+MOBILE = 3 IMAGES
+========================================= */
 
 .image-grid {
+
+width: 100%;
 
 display: grid;
 
 grid-template-columns: repeat(3, 1fr);
 
-gap: 6px;
+gap: 4px;
 
-padding: 6px;
+padding: 4px;
 
 }
 
-/* IMAGE */
+/* =========================================
+IMAGES
+========================================= */
 
 .ok {
 
@@ -185,23 +249,21 @@ display: block;
 
 object-fit: cover;
 
-border-radius: 8px;
+border-radius: 7px;
 
-transition: 0.3s;
+transition: 0.2s;
 
 }
 
-/* IMAGE HOVER */
+/* Desktop hover */
 
 .ok:hover {
 
-transform: scale(1.05);
+transform: scale(1.04);
 
-background-color: gray;
+border: 2px solid red;
 
-border: 3px solid red;
-
-border-radius: 12px;
+border-radius: 10px;
 
 position: relative;
 
@@ -209,9 +271,9 @@ z-index: 5;
 
 }
 
-/* =========================
+/* =========================================
 SCROLL POSITION
-========================= */
+========================================= */
 
 #home,
 #about,
@@ -223,21 +285,21 @@ SCROLL POSITION
 #drinks,
 #gift {
 
-scroll-margin-top: 60px;
+scroll-margin-top: 65px;
 
 }
 
-/* =========================
+/* =========================================
 ABOUT SECTION
-========================= */
+========================================= */
 
 #about {
 
-margin-top: 100px;
+width: calc(100% - 14px);
 
-margin-bottom: 100px;
+margin: 70px 7px 80px;
 
-padding: 25px;
+padding: 18px 12px;
 
 background-color: #777;
 
@@ -251,15 +313,15 @@ border-radius: 10px;
 
 .out {
 
-color: white;
-
-font-size: 25px;
+display: block;
 
 text-align: center;
 
-display: block;
+color: white;
 
-margin-bottom: 20px;
+font-size: 23px;
+
+margin-bottom: 15px;
 
 }
 
@@ -267,19 +329,29 @@ margin-bottom: 20px;
 
 .ab {
 
+display: block;
+
 color: white;
 
-line-height: 1.6;
+font-size: 14px;
 
-font-size: 16px;
+line-height: 1.55;
+
+word-wrap: break-word;
 
 }
 
 .ab h4 {
-margin: 0;
+
+font-weight: normal;
+
 }
 
-/* LINE */
+.ab strong {
+
+font-size: 15px;
+
+}
 
 .ab hr {
 
@@ -287,63 +359,81 @@ border: none;
 
 border-top: 2px solid red;
 
-margin: 20px 0;
+margin: 15px 0;
 
 }
 
-/* =========================
-FOOTER
-========================= */
+/* =========================================
+CONTACT
+========================================= */
 
 #contact {
 
-scroll-margin-top: 60px;
+width: 100%;
 
-margin-top: 50px;
+margin-top: 30px;
+
+scroll-margin-top: 65px;
 
 }
 
+/* =========================================
+FOOTER
+========================================= */
+
 footer {
+
+width: 100%;
 
 background-color: #151827;
 
-color: red;
+color: white;
 
-padding: 50px 7%;
-
-display: grid;
-
-grid-template-columns: repeat(3, 1fr);
-
-gap: 30px;
+padding: 30px 12px;
 
 border: 2px solid red;
 
 border-radius: 10px;
 
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 10px;
+
 }
 
-/* FOOTER HEADINGS */
+/* FOOTER BOX */
+
+.footer-box {
+
+text-align: center;
+
+}
 
 .footer-box h3 {
 
-margin-bottom: 15px;
-
 color: red;
 
-}
+font-size: 15px;
 
-/* FOOTER TEXT */
+margin-bottom: 10px;
+
+}
 
 footer p {
 
 color: white;
 
-margin: 8px 0;
+margin: 6px 0;
+
+font-size: 12px;
 
 }
 
-/* OWNER */
+/* =========================================
+OWNER
+========================================= */
 
 .owner {
 
@@ -351,21 +441,19 @@ grid-column: 1 / -1;
 
 text-align: center;
 
-margin-top: 30px;
+margin-top: 20px;
 
-padding-top: 25px;
+padding-top: 18px;
 
 border-top: 1px solid red;
-
-color: white;
 
 }
 
 .owner p {
 
-margin: 8px 0 3px;
-
 color: red;
+
+margin: 7px 0 3px;
 
 }
 
@@ -373,98 +461,295 @@ color: red;
 
 color: white;
 
+font-size: 13px;
+
 }
 
-/* =========================
-MOBILE RESPONSIVE
-========================= */
+/* =========================================
+TABLET
+600px+
+========================================= */
 
-@media (max-width: 700px) {
+@media (min-width: 600px) {
 
-/* Navbar */
+.h {
+
+    font-size: 23px;
+
+    padding: 12px;
+}
+
 
 .hey {
 
-    text-align: center;
+    padding: 7px 10px;
 
-    padding: 8px 3px;
+    gap: 5px;
 }
+
 
 .hey > a,
 summary {
 
-    padding: 6px 8px;
+    font-size: 15px;
 
-    font-size: 14px;
+    padding: 8px 10px;
 }
 
 
-/* Images */
+/*
+   STILL 3 IMAGES
+*/
 
 .image-grid {
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 5px;
+    gap: 7px;
 
-    padding: 5px;
+    padding: 7px;
 }
 
-
-/* About */
 
 #about {
 
-    margin-top: 70px;
+    width: calc(100% - 40px);
 
-    padding: 18px;
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+    padding: 25px;
 }
+
 
 .ab {
 
-    font-size: 14px;
+    font-size: 16px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-
-/* Footer */
 
 footer {
 
-    grid-template-columns: 1fr 1fr;
+    padding: 40px 25px;
 
-    padding: 35px 20px;
-}
-
-.owner {
-
-    grid-column: 1 / -1;
+    gap: 20px;
 }
 
 }
 
-/* =========================
-VERY SMALL MOBILE
-========================= */
+/* =========================================
+LAPTOP / PC
+900px+
+========================================= */
 
-@media (max-width: 400px) {
+@media (min-width: 900px) {
+
+.h {
+
+    font-size: 26px;
+
+    padding: 14px;
+}
+
+
+.hey {
+
+    padding: 8px 15px;
+
+    gap: 6px;
+}
+
+
+.hey > a,
+summary {
+
+    font-size: 16px;
+
+    padding: 8px 12px;
+}
+
+
+/*
+   STILL 3 IMAGES
+*/
 
 .image-grid {
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    padding: 10px;
 }
+
+
+#about {
+
+    width: calc(100% - 80px);
+
+    margin-left: 40px;
+
+    margin-right: 40px;
+
+    padding: 35px;
+}
+
+
+.out {
+
+    font-size: 28px;
+}
+
+
+.ab {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
 
 footer {
 
-    grid-template-columns: 1fr;
+    padding: 50px 7%;
 
-    text-align: center;
+    gap: 30px;
 }
 
-.owner {
 
-    grid-column: auto;
+.footer-box h3 {
+
+    font-size: 18px;
+}
+
+
+footer p {
+
+    font-size: 14px;
+}
+
+
+.owner strong {
+
+    font-size: 15px;
+}
+
+}
+
+/* =========================================
+VERY SMALL MOBILE
+350px OR LESS
+========================================= */
+
+@media (max-width: 350px) {
+
+.h {
+
+    font-size: 17px;
+
+    padding: 9px 2px;
+}
+
+
+.hey {
+
+    justify-content: center;
+
+    gap: 2px;
+
+    padding: 5px 2px;
+}
+
+
+.hey > a,
+summary {
+
+    font-size: 11px;
+
+    padding: 6px 5px;
+}
+
+
+.menu-options {
+
+    width: 120px;
+}
+
+
+/*
+   IMPORTANT:
+   EVEN VERY SMALL MOBILE
+   = 3 IMAGES
+*/
+
+.image-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3px;
+
+    padding: 3px;
+}
+
+
+.ok {
+
+    border-radius: 5px;
+}
+
+
+#about {
+
+    width: calc(100% - 10px);
+
+    margin-left: 5px;
+
+    margin-right: 5px;
+
+    padding: 15px 9px;
+}
+
+
+.out {
+
+    font-size: 20px;
+}
+
+
+.ab {
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+
+footer {
+
+    padding: 25px 7px;
+
+    gap: 8px;
+}
+
+
+.footer-box h3 {
+
+    font-size: 13px;
+}
+
+
+footer p {
+
+    font-size: 10px;
+}
+
+
+.owner strong {
+
+    font-size: 11px;
 }
 
 }
